@@ -8,6 +8,11 @@ import requests
 
 # Programm Code
 
-response = requests.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Margarita")
-data = response.json()
-print(data)
+# Nutzer nach dem Getränk fragen
+drink = input("Welches Getränk möchtest du suchen? ")
+
+# Variable in die URL einfügen
+response = requests.get(f"https://www.thecocktaildb.com/api/json/v1/1/search.php?s={drink}")
+
+# Ausgabe (z.B. rohe JSON-Daten)
+print(response.json())
