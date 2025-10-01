@@ -2,22 +2,22 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import requests
 
-API_BASE = "https://www.thecocktaildb.com/api/json/v1/1/"
+API = "https://www.thecocktaildb.com/api/json/v1/1/"
 
 def search_by_name(name):
-    url = API_BASE + f"search.php?s={name}"
+    url = API + f"search.php?s={name}"
     resp = requests.get(url)
     resp.raise_for_status()
     return resp.json().get("drinks")
 
 def filter_by_ingredient(ingredient):
-    url = API_BASE + f"filter.php?i={ingredient}"
+    url = API + f"filter.php?i={ingredient}"
     resp = requests.get(url)
     resp.raise_for_status()
     return resp.json().get("drinks")
 
 def lookup_cocktail(id_):
-    url = API_BASE + f"lookup.php?i={id_}"
+    url = API + f"lookup.php?i={id_}"
     resp = requests.get(url)
     resp.raise_for_status()
     return resp.json().get("drinks")
@@ -50,7 +50,7 @@ class CocktailApp:
         self.current_results = []  # speichert die aktuelle Ergebnisliste
 
     def on_search_name(self):
-        query = self.entry.get().strip()
+        query = self.entry.get().strip() 
         if not query:
             messagebox.showinfo("Hinweis", "Bitte einen Namen eingeben.")
             return
@@ -89,7 +89,7 @@ class CocktailApp:
             return
         idx = sel[0]
         drink = self.current_results[idx]
-        # Hole vollständige Details via lookup
+        # Hole vollstaendige Details via lookup
         full = lookup_cocktail(drink.get("idDrink"))
         if full:
             detail = full[0]
@@ -102,8 +102,8 @@ class CocktailApp:
         sb.append(f"Category: {detail.get('strCategory')}")
         sb.append(f"Glas: {detail.get('strGlass')}")
         sb.append("Zutaten:")
-        # Zutaten & Mengen: strIngredient1… strMeasure1 …
-        for i in range(1, 16):  # max 15 Zutaten möglich
+        # Zutaten & Mengen: strIngredient1 strMeasure1 
+        for i in range(1, 16):  # max 15 Zutaten 
             ingr = detail.get(f"strIngredient{i}")
             meas = detail.get(f"strMeasure{i}")
             if ingr and ingr.strip():
