@@ -5,6 +5,7 @@ print("Cocktail - API")
 # Bibliotheken importieren
 import requests
 
+'''
 
 # Programm Code
 
@@ -16,3 +17,6 @@ response = requests.get(f"https://www.thecocktaildb.com/api/json/v1/1/search.php
 
 # Ausgabe (z.B. rohe JSON-Daten)
 print(response.json())
+
+'''
+
