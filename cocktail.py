@@ -124,7 +124,7 @@ def zeige_details(event=None):
         zutat = drink.get(f"strIngredient{i}")
         menge = drink.get(f"strMeasure{i}")
         if zutat:
-            # Menge kann None sein -> fallback zu leerem String
+            # Menge kann None sein
             zutaten.append(f"{zutat} - {menge or ''}")
 
     # Info-Text formatieren (Name, Kategorie, Glas, Zutaten, Anleitung)
