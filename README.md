@@ -1,7 +1,7 @@
 # Cocktail-API + Tkinter
 
 Ein Python-Projekt welches mit grafischer Oberfläche (GUI), das über die **TheCocktailDB-API** Cocktails und deren Zutaten suchen kann.  
-Erstellt mit **Tkinter** (Standard-GUI-Bibliothek von Python) und **requests** für den Internetzugriff.
+Erstellt mit **Tkinter** für GUI und **requests** für den API zugriff 
 
 ---
 
@@ -43,3 +43,4 @@ Bevor das Programm gestartet wird, müssen eventuell benötigte Bibliotheken ins
 
 ```bash
 pip install requests
+
