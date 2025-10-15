@@ -15,7 +15,7 @@ Die Daten stammen von der öffentlichen API:
 
 ---
 
-## 🧩 Funktionen
+## Funktionen
 
 - **Cocktail-Suche:**  
   Suche nach Cocktails anhand des Namens (z. B. "Vodka-Martini").
@@ -29,7 +29,7 @@ Die Daten stammen von der öffentlichen API:
 
 ---
 
-## 🛠️ Voraussetzungen
+## Voraussetzungen
 
 Vor programmstart müssen sämtliche benötigte Bibliotheken installiert werden!!!
 
@@ -39,5 +39,6 @@ Vor programmstart müssen sämtliche benötigte Bibliotheken installiert werden!
 
 ganz simpel:
   pip install requests
+
 
 
