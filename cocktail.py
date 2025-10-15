@@ -1,4 +1,4 @@
-# Bibliotheken importieren - Vorher pip Install!!!
+# Bibliotheken importieren - Vorher pip Install!!!!!
 import tkinter as tk                     # GUI-Bibliothek (eingebautes Tkinter)
 from tkinter import messagebox            # einfache Dialoge (Info/Fehler/Warnung)
 import requests                           # HTTP-Anfragen an die Cocktail-API
