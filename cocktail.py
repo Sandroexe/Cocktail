@@ -1,6 +1,6 @@
 # Bibliotheken importieren - Vorher pip Install!!!!!
-import tkinter as tk                     # GUI-Bibliothek (eingebautes Tkinter)
-from tkinter import messagebox            # einfache Dialoge (Info/Fehler/Warnung)
+import tkinter as tk                     # für GUI
+from tkinter import messagebox            # Dialogfenster
 import requests                           # HTTP-Anfragen an die Cocktail-API
 
 # Funktionen definieren
@@ -135,7 +135,7 @@ Alkoholisch: {drink.get('strAlcoholic', 'Unbekannt')}
 Glas: {drink.get('strGlass', 'Unbekannt')}
 
 Zutaten:
-{chr(10).join(zutaten)}
+{'\n'.join(zutaten)}
 
 Anleitung:
 {drink.get('strInstructions', 'Keine Anleitung verfügbar.')}
